@@ -1,1 +1,646 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#06111d">
+<title>ESPORT TOUR SMART UMMAH DAERAH PERAK TENGAH 2026</title>
 
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family:"Plus Jakarta Sans",sans-serif;
+  background:#06111d;
+  color:#eef7ff
+}
+.orbitron{
+  font-family:Orbitron,sans-serif
+}
+.glass{
+  background:rgba(8,24,39,.78);
+  border:1px solid rgba(52,211,153,.18);
+  backdrop-filter:blur(14px)
+}
+.input{
+  width:100%;
+  border-radius:.85rem;
+  border:1px solid rgba(148,163,184,.2);
+  background:#071a2a;
+  padding:.8rem 1rem;
+  color:#fff;
+  outline:none
+}
+.input:focus{
+  border-color:#34d399;
+  box-shadow:0 0 0 3px rgba(52,211,153,.1)
+}
+.btn{
+  border-radius:.85rem;
+  padding:.85rem 1rem;
+  font-weight:800
+}
+.btn-primary{
+  background:#10b981;
+  color:#04130e
+}
+.btn-primary:hover{
+  background:#34d399
+}
+.btn-secondary{
+  background:#0f2538;
+  border:1px solid rgba(148,163,184,.2)
+}
+.hiddenx{
+  display:none!important
+}
+</style>
+</head>
+
+<body>
+
+<header class="sticky top-0 z-40 border-b border-white/10 bg-[#06111d]/90 backdrop-blur">
+<div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+
+<div>
+<div class="orbitron text-xs font-bold tracking-[.2em] text-emerald-400">
+SMART UMMAH 2026
+</div>
+
+<div class="text-sm font-semibold">
+ESPORT TOUR • PERAK TENGAH
+</div>
+</div>
+
+<a href="#daftar" class="btn btn-primary text-xs">
+DAFTAR
+</a>
+
+</div>
+</header>
+
+<main class="mx-auto max-w-6xl px-4 py-8 md:py-14">
+
+<section class="grid gap-8 md:grid-cols-[1.2fr_.8fr] md:items-center">
+
+<div>
+
+<div class="mb-4 inline-flex rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-xs font-bold text-emerald-300">
+10 OKTOBER 2026 • SERI ISKANDAR
+</div>
+
+<h1 class="orbitron text-3xl font-extrabold leading-tight md:text-5xl">
+ESPORT TOUR
+<br>
+<span class="text-emerald-400">SMART UMMAH</span>
+</h1>
+
+<p class="mt-5 max-w-2xl text-slate-300">
+Pertandingan eFootball dan Mobile Legends sempena Smart Ummah Daerah Perak Tengah 2026.
+</p>
+
+<div class="mt-7 grid grid-cols-2 gap-3">
+
+<div class="glass rounded-2xl p-4">
+<div class="text-xs text-slate-400">eFootball</div>
+<div class="mt-1 text-2xl font-extrabold">RM5</div>
+<div class="text-xs text-slate-400">32 pemain</div>
+</div>
+
+<div class="glass rounded-2xl p-4">
+<div class="text-xs text-slate-400">Mobile Legends</div>
+<div class="mt-1 text-2xl font-extrabold">RM10</div>
+<div class="text-xs text-slate-400">32 pasukan</div>
+</div>
+
+</div>
+</div>
+
+<div class="glass rounded-3xl p-6">
+
+<div class="orbitron text-xs font-bold tracking-widest text-cyan-300">
+PENDAFTARAN
+</div>
+
+<div id="countdown" class="mt-5 grid grid-cols-4 gap-2 text-center">
+</div>
+
+<p class="mt-5 text-center text-xs text-slate-400">
+Pendaftaran ditutup apabila slot penuh.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="daftar" class="mt-12">
+
+<div class="mb-6">
+
+<div class="orbitron text-xs font-bold tracking-widest text-emerald-400">
+BORANG RASMI
+</div>
+
+<h2 class="mt-2 text-2xl font-extrabold">
+Daftar Pertandingan
+</h2>
+
+</div>
+
+
+<div class="mb-6 grid gap-3 md:grid-cols-2">
+
+<button
+class="btn btn-secondary category-btn"
+data-category="eFootball">
+eFootball — Solo 1v1
+</button>
+
+<button
+class="btn btn-secondary category-btn"
+data-category="Mobile Legends">
+Mobile Legends — 5v5
+</button>
+
+</div>
+
+
+<form id="regForm" class="glass rounded-3xl p-5 md:p-8">
+
+<input type="hidden" id="category" value="eFootball">
+
+
+<div id="efootballFields" class="grid gap-4 md:grid-cols-2">
+
+<label>
+Nama penuh
+<input class="input mt-2" id="efName" required>
+</label>
+
+<label>
+Nombor telefon
+<input class="input mt-2" id="efPhone" required>
+</label>
+
+<label>
+Email
+<input class="input mt-2" id="efEmail" type="email" required>
+</label>
+
+<label>
+IGN
+<input class="input mt-2" id="efIgn" required>
+</label>
+
+<label>
+Game ID
+<input class="input mt-2" id="efGameId" required>
+</label>
+
+</div>
+
+
+<div id="mlbbFields" class="hiddenx">
+
+<div class="grid gap-4 md:grid-cols-2">
+
+<label>
+Nama pasukan
+<input class="input mt-2" id="mlTeam">
+</label>
+
+<label>
+Nama kapten
+<input class="input mt-2" id="mlCaptain">
+</label>
+
+<label>
+Nombor telefon
+<input class="input mt-2" id="mlPhone">
+</label>
+
+<label>
+Email
+<input class="input mt-2" id="mlEmail" type="email">
+</label>
+
+</div>
+
+
+<div class="mt-5">
+
+<div class="mb-3 font-bold">
+5 Pemain MLBB
+</div>
+
+<div id="players" class="grid gap-3 md:grid-cols-2">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="mt-6 rounded-2xl border border-yellow-400/20 bg-yellow-400/5 p-4 text-sm text-slate-300">
+
+<div class="font-bold text-yellow-300">
+Pembayaran
+</div>
+
+<div class="mt-2">
+AFFIN BANK • <b>105550000264</b>
+<br>
+Nama akaun: Majlis Belia Daerah Perak Tengah
+</div>
+
+</div>
+
+
+<label class="mt-5 block">
+
+Bukti pembayaran
+
+<input
+class="input mt-2"
+id="receipt"
+type="file"
+accept="image/jpeg,image/png,application/pdf"
+required>
+
+<span class="mt-1 block text-xs text-slate-500">
+Maksimum 2MB.
+</span>
+
+</label>
+
+
+<label class="mt-5 flex gap-3 text-sm text-slate-300">
+
+<input
+type="checkbox"
+id="consent"
+required
+class="mt-1">
+
+<span>
+Saya mengesahkan maklumat yang diberikan adalah benar dan bersetuju dengan syarat pertandingan.
+</span>
+
+</label>
+
+
+<button
+id="submitBtn"
+class="btn btn-primary mt-6 w-full"
+type="submit">
+
+HANTAR PENDAFTARAN
+
+</button>
+
+
+<div id="status" class="mt-4 hidden rounded-xl p-4 text-sm">
+</div>
+
+</form>
+
+</section>
+
+</main>
+
+
+<footer class="border-t border-white/10 py-8 text-center text-xs text-slate-500">
+
+ESPORT TOUR SMART UMMAH DAERAH PERAK TENGAH 2026
+
+</footer>
+
+
+<script>
+
+/* URL Google Apps Script akan dimasukkan kemudian */
+const API_URL = "PASTE_GOOGLE_APPS_SCRIPT_API_URL_HERE";
+
+
+const $ = s => document.querySelector(s);
+
+const players = $("#players");
+
+
+for(let i=1;i<=5;i++){
+
+players.insertAdjacentHTML(
+"beforeend",
+
+`<div class="rounded-2xl border border-white/10 bg-black/10 p-4">
+
+<div class="mb-2 text-xs font-bold text-emerald-300">
+PEMAIN ${i}
+</div>
+
+<input
+class="input player-name"
+placeholder="Nama pemain">
+
+<input
+class="input player-id mt-2"
+placeholder="Game ID">
+
+</div>`
+);
+
+}
+
+
+document.querySelectorAll(".category-btn").forEach(b => {
+
+b.onclick = () => {
+
+const cat = b.dataset.category;
+
+const ef = cat === "eFootball";
+
+$("#category").value = cat;
+
+$("#efootballFields").classList.toggle(
+"hiddenx",
+!ef
+);
+
+$("#mlbbFields").classList.toggle(
+"hiddenx",
+ef
+);
+
+document.querySelectorAll(".category-btn")
+.forEach(x =>
+x.classList.remove(
+"ring-2",
+"ring-emerald-400"
+));
+
+b.classList.add(
+"ring-2",
+"ring-emerald-400"
+);
+
+};
+
+});
+
+
+document
+.querySelector('[data-category="eFootball"]')
+.click();
+
+
+function status(msg,ok=false){
+
+const e = $("#status");
+
+e.textContent = msg;
+
+e.className =
+"mt-4 rounded-xl p-4 text-sm " +
+(ok
+?
+"border border-emerald-400/20 bg-emerald-400/10 text-emerald-200"
+:
+"border border-red-400/20 bg-red-400/10 text-red-200");
+
+}
+
+
+function tick(){
+
+let n = Math.max(
+0,
+new Date(
+"2026-10-10T08:00:00+08:00"
+).getTime()
+-
+Date.now()
+);
+
+let a = [
+
+Math.floor(n/86400000),
+
+Math.floor(
+n%86400000/3600000
+),
+
+Math.floor(
+n%3600000/60000
+),
+
+Math.floor(
+n%60000/1000
+)
+
+];
+
+$("#countdown").innerHTML =
+
+a.map((v,i) =>
+
+`<div class="rounded-xl bg-white/5 p-3">
+
+<div class="text-xl font-extrabold">
+${String(v).padStart(2,"0")}
+</div>
+
+<div class="text-[10px] text-slate-500">
+${["HARI","JAM","MIN","SAAT"][i]}
+</div>
+
+</div>`
+
+).join("");
+
+}
+
+
+setInterval(tick,1000);
+
+tick();
+
+
+function b64(f){
+
+return new Promise((res,rej)=>{
+
+let r = new FileReader();
+
+r.onload = () => res(r.result);
+
+r.onerror = rej;
+
+r.readAsDataURL(f);
+
+});
+
+}
+
+
+$("#regForm").onsubmit = async e => {
+
+e.preventDefault();
+
+
+if(API_URL.includes("PASTE_"))
+
+return status(
+"API belum disambungkan. Masukkan URL Apps Script API dalam index.html."
+);
+
+
+let file = $("#receipt").files[0];
+
+if(!file)
+
+return status(
+"Sila muat naik bukti pembayaran."
+);
+
+
+if(file.size > 2*1024*1024)
+
+return status(
+"Saiz resit melebihi 2MB."
+);
+
+
+let cat = $("#category").value;
+
+let btn = $("#submitBtn");
+
+btn.disabled = true;
+
+btn.textContent = "MENGHANTAR...";
+
+
+try{
+
+let d = {
+
+category:cat,
+
+proof:await b64(file),
+
+fileName:file.name,
+
+mimeType:file.type
+
+};
+
+
+if(cat === "eFootball"){
+
+Object.assign(d,{
+
+name:$("#efName").value.trim(),
+
+phone:$("#efPhone").value.trim(),
+
+email:$("#efEmail").value.trim(),
+
+ign:$("#efIgn").value.trim(),
+
+gameId:$("#efGameId").value.trim()
+
+});
+
+}
+
+else{
+
+d.name = $("#mlTeam").value.trim();
+
+d.captain = $("#mlCaptain").value.trim();
+
+d.phone = $("#mlPhone").value.trim();
+
+d.email = $("#mlEmail").value.trim();
+
+d.players = [
+...document.querySelectorAll(".player-name")
+].map((x,i)=>({
+
+name:x.value.trim(),
+
+id:document.querySelectorAll(
+".player-id"
+)[i].value.trim()
+
+}));
+
+}
+
+
+await fetch(
+
+API_URL,
+
+{
+
+method:"POST",
+
+mode:"no-cors",
+
+headers:{
+"Content-Type":
+"application/x-www-form-urlencoded;charset=UTF-8"
+},
+
+body:new URLSearchParams({
+
+payload:JSON.stringify(d)
+
+})
+
+}
+
+);
+
+
+status(
+"Pendaftaran telah dihantar. Semak Google Sheet untuk pengesahan rekod.",
+true
+);
+
+$("#regForm").reset();
+
+
+}
+
+catch(err){
+
+console.error(err);
+
+status(
+"Pendaftaran gagal dihantar. Cuba semula."
+);
+
+}
+
+finally{
+
+btn.disabled = false;
+
+btn.textContent =
+"HANTAR PENDAFTARAN";
+
+}
+
+};
+
+</script>
+
+</body>
+</html>
